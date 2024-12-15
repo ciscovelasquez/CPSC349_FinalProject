@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Cisco Velasquez</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Style for project pages and dropdowns-->
+    <style>
+        .projects {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .project {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        .project-info {
+            flex: 2;
+        }
+
+        .project-image {
+            flex: 1;
+            max-width: 300px;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .dropdown {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            display: none; /* Hidden by default */
+        }
+
+        .btn-dropdown {
+            background-color: #0078D4;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .btn-dropdown:hover {
+            background-color: #005ea6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Navigation Bar for website-->
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="projects">
+            <h1>My Projects</h1>
+
+            <!-- Project 1 -->
+            <div class="project">
+                <div class="project-info">
+                    <h2>Color Creator Application</h2>
+                    <p>An iOS application that allows a user to create a color.
+                        Through my app, you are able to modify the significance of each 
+                        color (green/red/blue) through a slider or by typing it directly. 
+                        The color at the top of the screen will change depending on the combination. 
+                    </p>
+                    <button class="btn-dropdown" onclick="toggleDropdown('dropdown1')">Learn more about it</button>
+                    <div id="dropdown1" class="dropdown">
+                        <p><strong>Technologies:</strong> Swift, Storyboard, Xcode</p>
+                        <p><strong>Challenges:</strong> Setting up the constraints for different objects</p>
+                        <p><strong>Outcome:</strong> Better able to understand the application creation process.</p>
+                    </div>
+                </div>
+                <div class="project-image">
+                    <img src="c:\Users\1958l\Pictures\ColorMaker.jpg" alt="Portfolio Website Screenshot">
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project">
+                <div class="project-info">
+                    <h2>SmartUp</h2>
+                    <p>An application that helps students study better and get better grades.
+                        Similar to Quizlet, my team and I were able to create an application that
+                        allows students to add a flashcard set from which they can create a Quiz, 
+                        study flashcards, matching mode, and a free response mode. They are also able
+                        to add important dates to a task manager. 
+                    </p>
+                    <button class="btn-dropdown" onclick="toggleDropdown('dropdown2')">Learn more about it</button>
+                    <div id="dropdown2" class="dropdown">
+                        <p><strong>Technologies:</strong> Python, GitHub, TKinter</p>
+                        <p><strong>Challenges:</strong> Being able to connect our project together as a group.</p>
+                        <p><strong>Outcome:</strong> Much better understanding of teamwork and time management.</p>
+                    </div>
+                </div>
+                <div class="project-image">
+                    <img src="c:\Users\1958l\Pictures\Screenshots\Screenshot 2024-12-15 053056.png" alt="E-Commerce Platform Screenshot">
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project">
+                <div class="project-info">
+                    <h2>To-List Application</h2>
+                    <p>An iOS application that allows you to track your daily tasks.
+                        Through this app a user is able to add tasks that they would like,
+                        checkmark tasks that have already been completed, and also delete 
+                        tasks when they want to start a new task board. 
+                    </p>
+                    <button class="btn-dropdown" onclick="toggleDropdown('dropdown3')">Learn more about it</button>
+                    <div id="dropdown3" class="dropdown">
+                        <p><strong>Technologies:</strong> Swift, Storyboard, Xcode</p>
+                        <p><strong>Challenges:</strong> Not getting each others function to crash one another.</p>
+                        <p><strong>Outcome:</strong> Learned how to better split tasks among a group. </p>
+                    </div>
+                </div>
+                <div class="project-image">
+                    <img src="c:\Users\1958l\Pictures\To-Do-List.jpg" alt="Machine Learning Model Screenshot">
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <!--Footer of website-->
+    <footer>
+        <p>Designed and developed by Cisco Velasquez | CWID: 886368570</p>
+    </footer>
+<!-- Function for deciding to show drop down view or not-->
+    <script>
+        function toggleDropdown(id) {
+            const dropdown = document.getElementById(id);
+            if (dropdown.style.display === "none" || dropdown.style.display === "") {
+                dropdown.style.display = "block"; // Show the dropdown
+            } else {
+                dropdown.style.display = "none"; // Hide the dropdown
+            }
+        }
+    </script>
+</body>
+</html>
