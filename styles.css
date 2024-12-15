@@ -1,0 +1,282 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap');
+ 
+/*Main coloring scheme for website*/
+:root {
+    --primary-color: #0056b3; /* Rich blue for accents */
+    --secondary-color: #2e2e2e; /* Dark grey for headers and footer */
+    --accent-color: #708090; /* Slate grey for highlights */
+    --background-color: #f0f0f0; /* Soft grey background */
+    --text-color: #444; /* Medium grey for text */
+    --white: #fff;
+    --gradient: linear-gradient(135deg, #0056b3, #708090);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.7;
+}
+
+/* Header Styles */
+header {
+    background: var(--gradient);
+    color: var(--white);
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .navbar {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+header .navbar li {
+    position: relative;
+}
+
+header .navbar a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+header .navbar a:hover,
+header .navbar .active {
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+}
+
+/* Main Section */
+.main {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    background-color: var(--white);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* Intro Section */
+.intro-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    animation: fadeIn 1s ease-in-out;
+}
+/*Home page image*/
+.intro-image {
+    flex: 1 1 300px;
+    text-align: center;
+}
+
+.intro img {
+    width: 80%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 15px;
+    border: 5px solid var(--accent-color);
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.intro img:hover {
+    transform: scale(1.05);
+}
+
+.intro h2 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-top: 0.5rem;
+}
+
+.intro-text {
+    flex: 2 1 300px;
+    text-align: left;
+}
+
+.intro-text h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.intro-text p {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.intro-text .button {
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    background: var(--gradient);
+    color: var(--white);
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.intro-text .button:hover {
+    background: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+/*Styling for button to click on resume*/
+.resume .button {
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    background: var(--gradient);
+    color: var(--white);
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    text-align: center;
+}
+
+.resume .button:hover {
+    background: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+/*Styling for projects page*/
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.project {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.project-info {
+    flex: 2;
+}
+
+.project-image {
+    flex: 1;
+    max-width: 300px;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    display: none; /* Hidden by default */
+}
+
+.btn-dropdown {
+    background-color: #0078D4;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.btn-dropdown:hover {
+    background-color: #005ea6;
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 0.9rem;
+    margin-top: 3rem;
+}
+
+/* Keyframes for animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .intro-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro-image,
+    .intro-text {
+        flex: 1 1 100%;
+    }
+
+    .intro img {
+        width: 60%;
+        max-width: 200px;
+        height: auto;
+    }
+
+    .intro-text h1 {
+        font-size: 2rem;
+    }
+
+    .intro-text p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .intro img {
+        width: 80%;
+    }
+
+    .intro-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .intro-text p {
+        font-size: 0.9rem;
+    }
+}
